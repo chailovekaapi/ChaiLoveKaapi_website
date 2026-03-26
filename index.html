@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
             overflow: hidden;
             background: linear-gradient(to right, var(--color-primary), var(--color-primary-container));
         }
-        
+
         /* Video background placeholder using gradient since video isn't available */
         .hero-bg {
             position: absolute;
@@ -35,7 +36,8 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(0, 114, 184, 0.7); /* primary overlay */
+            background: rgba(0, 114, 184, 0.7);
+            /* primary overlay */
             z-index: 1;
         }
 
@@ -76,7 +78,7 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-        
+
         .usp-card:hover {
             transform: translateY(-5px);
         }
@@ -100,7 +102,7 @@
             color: var(--color-on-secondary);
             margin-bottom: var(--spacing-6);
         }
-        
+
         /* Menu Teaser */
         .menu-item {
             border-radius: var(--radius-lg);
@@ -108,24 +110,25 @@
             background: var(--color-surface-container-low);
             transition: transform 0.3s ease;
         }
-        
+
         .menu-item:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-ambient-lg);
         }
-        
+
         .menu-img {
             height: 250px;
             background: #ccc;
             width: 100%;
             object-fit: cover;
         }
-        
+
         .menu-info {
             padding: var(--spacing-6);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -148,14 +151,17 @@
     <section class="hero">
         <div class="hero-bg">
             <!-- Simulating video with an image -->
-            <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=2670" alt="Pouring Filter Coffee">
+            <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=2670"
+                alt="Pouring Filter Coffee">
         </div>
         <div class="hero-content">
             <h1>Premium Taste.<br>Zero Compromise.</h1>
-            <p style="font-size: var(--font-size-title-lg); font-weight: 500;">The Refreshing Ritual of Modern India.</p>
+            <p style="font-size: var(--font-size-title-lg); font-weight: 500;">The Refreshing Ritual of Modern India.
+            </p>
             <div class="hero-ctas">
                 <a href="menu/" class="btn btn-outline" style="color: white; border-color: white;">Explore Menu</a>
-                <a href="franchise/" class="btn btn-secondary" style="background-color: var(--color-secondary);">Own a Franchise</a>
+                <a href="franchise/" class="btn btn-secondary" style="background-color: var(--color-secondary);">Own a
+                    Franchise</a>
             </div>
         </div>
     </section>
@@ -190,7 +196,7 @@
             </div>
             <div class="grid grid-4">
                 <div class="menu-item">
-                    <img src="images/Chai.png" alt="Premium CHai" class="menu-img">
+                    <img src="images/Chai.png" alt="Premium Chai" class="menu-img">
                     <div class="menu-info">
                         <h3>Premium CHai</h3>
                     </div>
@@ -202,13 +208,13 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="images/Thickshake.png" alt="Milkshakes" class="menu-img">
+                    <img src="images/Thickshake.png" alt="Thick Shakes" class="menu-img">
                     <div class="menu-info">
                         <h3>Milkshakes</h3>
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="images/Mojito.png" alt="Mojito" class="menu-img">
+                    <img src="images/Mojito.png" alt="Mojitos" class="menu-img">
                     <div class="menu-info">
                         <h3>Mojito</h3>
                     </div>
@@ -224,13 +230,18 @@
     <section class="franchise-teaser mt-12">
         <div class="container">
             <h2>The Safe & Scalable Bet.</h2>
-            <p style="font-size: var(--font-size-body-lg); max-width: 600px; margin: 0 auto; margin-bottom: var(--spacing-8);">Partner with the fastest-growing hybrid hub. Low wastage, high ROI, and our comprehensive plug-and-play system.</p>
-            <a href="franchise/" class="btn btn-outline" style="border-color: white; color: white;">Explore Franchise Model</a>
+            <p
+                style="font-size: var(--font-size-body-lg); max-width: 600px; margin: 0 auto; margin-bottom: var(--spacing-8);">
+                Partner with the fastest-growing hybrid hub. Low wastage, high ROI, and our comprehensive plug-and-play
+                system.</p>
+            <a href="franchise/" class="btn btn-outline" style="border-color: white; color: white;">Explore Franchise
+                Model</a>
         </div>
     </section>
 
     <!-- Simple Footer -->
-    <footer style="background-color: var(--color-surface-container-highest); padding: var(--spacing-16) 0; margin-top: 0; text-align: center;">
+    <footer
+        style="background-color: var(--color-surface-container-highest); padding: var(--spacing-16) 0; margin-top: 0; text-align: center;">
         <div class="container">
             <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-4);">Chai Love Kaapi</h2>
             <p>Premium Taste. Zero Compromise.</p>
@@ -242,4 +253,5 @@
 
     <script src="js/app.js"></script>
 </body>
+
 </html>

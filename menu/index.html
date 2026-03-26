@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,12 +30,17 @@
             column-gap: var(--spacing-8);
             padding: var(--spacing-8) 0 var(--spacing-24);
         }
-        
+
         @media (max-width: 900px) {
-            .masonry-gallery { column-count: 2; }
+            .masonry-gallery {
+                column-count: 2;
+            }
         }
+
         @media (max-width: 600px) {
-            .masonry-gallery { column-count: 1; }
+            .masonry-gallery {
+                column-count: 1;
+            }
         }
 
         .menu-card {
@@ -42,20 +48,21 @@
             margin-bottom: var(--spacing-8);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            background: rgba(255, 255, 255, 0.05); /* subtle glass effect for items */
+            background: rgba(255, 255, 255, 0.05);
+            /* subtle glass effect for items */
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .menu-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .menu-card img {
             width: 100%;
             display: block;
-            border-bottom: 2px solid rgba(255,255,255,0.1);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         .menu-card-info {
@@ -66,7 +73,7 @@
             color: var(--color-surface-container-lowest);
             font-size: var(--font-size-title-lg);
         }
-        
+
         /* Modal Styles */
         .modal-overlay {
             position: fixed;
@@ -137,7 +144,7 @@
             position: absolute;
             top: var(--spacing-4);
             right: var(--spacing-4);
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
             width: 40px;
@@ -155,9 +162,9 @@
         .close-modal:hover {
             background: var(--color-secondary);
         }
-
-</style>
+    </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -180,100 +187,116 @@
         <div class="container">
             <p class="label-md" style="color: var(--color-secondary-fixed-dim, #ffb3ae);">Our Craft</p>
             <h1>The Visual Craving</h1>
-            <p style="font-size: var(--font-size-title-lg); color: var(--color-surface-container-high); max-width: 600px; margin: var(--spacing-4) auto 0;">Experience the vibrant colors and authentic tastes of our signature blends.</p>
+            <p
+                style="font-size: var(--font-size-title-lg); color: var(--color-surface-container-high); max-width: 600px; margin: var(--spacing-4) auto 0;">
+                Experience the vibrant colors and authentic tastes of our signature blends.</p>
         </div>
     </header>
 
     <main class="container">
         <div class="masonry-gallery">
             <!-- Item 1 -->
-            <div class="menu-card" data-title="Premium Chai" data-desc="A perfect blend of Assam leaves and fresh crushed spices." data-img="../images/Chai.png">
+            <div class="menu-card" data-title="Premium Chai"
+                data-desc="A perfect blend of Assam leaves and fresh crushed spices." data-img="../images/Chai.png">
                 <img src="../images/Chai.png" alt="Premium Chai">
                 <div class="menu-card-info">
                     <h3>Premium Chai</h3>
                 </div>
             </div>
-            
-            <!-- Item 2 -->
-            <div class="menu-card" data-title="Authentic Filter Coffee" data-desc="Brewed slowly in a traditional brass dabara." data-img="../images/Filter%20Coffee.png">
-                <img src="../images/Filter%20Coffee.png" alt="Authentic Filter Coffee">
-                <div class="menu-card-info">
-                    <h3>Authentic Filter Coffee</h3>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="menu-card" data-title="Milkshakes" data-desc="Rich, thick, creamy and delicious." data-img="../images/Thickshake.png">
-                <img src="../images/Thickshake.png" alt="Milkshakes">
-                <div class="menu-card-info">
-                    <h3>Milkshakes</h3>
-                </div>
-            </div>
 
             <!-- Item 4 -->
-            <div class="menu-card" data-title="Mojito" data-desc="A refreshing cooler layered with citrus and mint." data-img="../images/Mojito.png">
+            <div class="menu-card" data-title="Mojitos" data-desc="A refreshing cooler layered with citrus and mint."
+                data-img="../images/Mojito.png">
                 <img src="../images/Mojito.png" alt="Mojito">
                 <div class="menu-card-info">
                     <h3>Mojito</h3>
                 </div>
             </div>
 
-            <!-- Item 5 -->
-            <div class="menu-card" data-title="Cheese Sandwich" data-desc="Grilled sandwich loaded with gooey cheese." data-img="../images/Cheese%20Sandwich.png">
-                <img src="../images/Cheese%20Sandwich.png" alt="Cheese Sandwich">
-                <div class="menu-card-info">
-                    <h3>Cheese Sandwich</h3>
-                </div>
-            </div>
-
-            <!-- Item 6 -->
-            <div class="menu-card" data-title="French Fries" data-desc="Double-fried for extra crunch, tossed in our signature spice dust." data-img="../images/French%20Fries.png">
-                <img src="../images/French%20Fries.png" alt="French Fries">
-                <div class="menu-card-info">
-                    <h3>French Fries</h3>
-                </div>
-            </div>
-
             <!-- Item 7 -->
-            <div class="menu-card" data-title="Ice Cream" data-desc="Rich and creamy scoops of delight." data-img="../images/Icecream.png">
+            <div class="menu-card" data-title="Ice Cream" data-desc="Rich and creamy scoops of delight."
+                data-img="../images/Icecream.png">
                 <img src="../images/Icecream.png" alt="Ice Cream">
                 <div class="menu-card-info">
                     <h3>Ice Cream</h3>
                 </div>
             </div>
 
-            <!-- Item 8 -->
-            <div class="menu-card" data-title="Lime Soda" data-desc="Sweet and salty bubbly refreshment." data-img="../images/Lime%20Soda.png">
-                <img src="../images/Lime%20Soda.png" alt="Lime Soda">
-                <div class="menu-card-info">
-                    <h3>Lime Soda</h3>
-                </div>
-            </div>
-
-            <!-- Item 9 -->
-            <div class="menu-card" data-title="Mango Lassi" data-desc="Rich, creamy, and bursting with the flavor of ripe mangoes." data-img="../images/Mango%20Lassi.png">
-                <img src="../images/Mango%20Lassi.png" alt="Mango Lassi">
-                <div class="menu-card-info">
-                    <h3>Mango Lassi</h3>
-                </div>
-            </div>
-
             <!-- Item 10 -->
-            <div class="menu-card" data-title="Masala Maggi" data-desc="Everyone's favorite comfort food with our special masala twist." data-img="../images/Masala%20Maggi.png">
+            <div class="menu-card" data-title="Masala Maggi"
+                data-desc="Everyone's favorite comfort food with our special masala twist."
+                data-img="../images/Masala%20Maggi.png">
                 <img src="../images/Masala%20Maggi.png" alt="Masala Maggi">
                 <div class="menu-card-info">
                     <h3>Masala Maggi</h3>
                 </div>
             </div>
 
+            <!-- Item 2 -->
+            <div class="menu-card" data-title="Authentic Filter Coffee"
+                data-desc="Brewed slowly in a traditional brass dabara." data-img="../images/Filter%20Coffee.png">
+                <img src="../images/Filter%20Coffee.png" alt="Authentic Filter Coffee">
+                <div class="menu-card-info">
+                    <h3>Authentic Filter Coffee</h3>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="menu-card" data-title="Cheese Sandwich" data-desc="Grilled sandwich loaded with gooey cheese."
+                data-img="../images/Cheese%20Sandwich.png">
+                <img src="../images/Cheese%20Sandwich.png" alt="Cheese Sandwich">
+                <div class="menu-card-info">
+                    <h3>Cheese Sandwich</h3>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="menu-card" data-title="Lime Soda" data-desc="Sweet and salty bubbly refreshment."
+                data-img="../images/Lime%20Soda.png">
+                <img src="../images/Lime%20Soda.png" alt="Lime Soda">
+                <div class="menu-card-info">
+                    <h3>Lime Soda</h3>
+                </div>
+            </div>
+
             <!-- Item 11 -->
-            <div class="menu-card" data-title="Classic Milkshake" data-desc="Classic milkshakes crafted to perfection." data-img="../images/Milkshakes.png">
+            <div class="menu-card" data-title="Classic Milkshake" data-desc="Classic milkshakes crafted to perfection."
+                data-img="../images/Milkshakes.png">
                 <img src="../images/Milkshakes.png" alt="Classic Milkshake">
                 <div class="menu-card-info">
                     <h3>Classic Milkshake</h3>
                 </div>
             </div>
-        </div>
+<!-- Item 3 -->
+            <div class="menu-card" data-title="Thick Shakes" data-desc="Rich, thick, creamy and delicious."
+                data-img="../images/Thickshake.png">
+                <img src="../images/Thickshake.png" alt="Milkshakes">
+                <div class="menu-card-info">
+                    <h3>Milkshakes</h3>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="menu-card" data-title="French Fries"
+                data-desc="Double-fried for extra crunch, tossed in our signature spice dust."
+                data-img="../images/French%20Fries.png">
+                <img src="../images/French%20Fries.png" alt="French Fries">
+                <div class="menu-card-info">
+                    <h3>French Fries</h3>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="menu-card" data-title="Mango Lassi"
+                data-desc="Rich, creamy, and bursting with the flavor of ripe mangoes."
+                data-img="../images/Mango%20Lassi.png">
+                <img src="../images/Mango%20Lassi.png" alt="Mango Lassi">
+                <div class="menu-card-info">
+                    <h3>Mango Lassi</h3>
+                </div>
+            </div>
+
+                    </div>
     </main>
 
     <!-- Floating Order Bar -->
@@ -304,4 +327,5 @@
 
     <script src="../js/app.js"></script>
 </body>
+
 </html>
