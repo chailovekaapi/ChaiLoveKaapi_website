@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Stores - Chai Love Kaapi</title>
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .hero {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            background: linear-gradient(to right, var(--color-primary), var(--color-primary-container));
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 114, 184, 0.7); /* primary overlay */
+            z-index: 1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 var(--spacing-4);
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: var(--spacing-4);
+        }
+        
+        .store-card {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-4);
+        }
+
+        .map-container {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-ambient);
+            height: 350px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <a href="../">
+                <img src="../images/logo.png" alt="Chai Love Kaapi Logo" class="protruding-logo">
+            </a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+        <div class="nav-links">
+            <a href="../" class="nav-item">Home</a>
+            <a href="../menu/" class="nav-item">Our Menu</a>
+            <a href="../story/" class="nav-item">Our Story</a>
+            <a href="./" class="nav-item active">Our Stores</a>
+            <a href="../franchise/" class="nav-item btn-primary" style="color: white; border-radius: 24px;">Own a Franchise</a>
+        </div>
+    </nav>
+
+    <header class="hero pt-20">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1514432324607-a2ce7beeaceb?auto=format&fit=crop&q=80&w=2670" alt="Chai Love Kaapi Store Exterior">
+        </div>
+        <div class="hero-content">
+            <h1>Experience the Ritual in Person.</h1>
+            <p style="font-size: var(--font-size-title-lg); font-weight: 500;">Find your nearest Chai Love Kaapi outlet.</p>
+        </div>
+    </header>
+
+    <section class="py-20 surface-zone">
+        <div class="container">
+            <h2 class="text-center mb-12">Our Branches</h2>
+            
+            <div class="grid grid-2">
+                <!-- Store 1: Headquarters -->
+                <div class="surface-card store-card">
+                    <div>
+                        <h3 class="mb-2">Chai Love Kaapi - Padarupalli</h3>
+                        <p class="label-md" style="color: var(--color-primary); margin-bottom: var(--spacing-4);">Head quarters</p>
+                        <p style="line-height: 1.8;">
+                            Master Colony, Padarupalli Main Rd,<br>
+                            behind N-Grand Function hall,<br>
+                            Nellore, Andhra Pradesh 524004
+                        </p>
+                    </div>
+                    
+                    <div class="map-container mt-4">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0"
+                            src="https://maps.google.com/maps?q=Chai+Love+Kaapi+-+Padarupalli&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/ab4byppBKQcF84A28" target="_blank" class="btn btn-outline mt-4" style="width: 100%;">
+                        Open in Google Maps
+                    </a>
+                </div>
+
+                <!-- Store 2: Madanapalli -->
+                <div class="surface-card store-card">
+                    <div>
+                        <h3 class="mb-2">Chai Love Kaapi - Society Colony</h3>
+                        <p class="label-md" style="color: var(--color-primary); margin-bottom: var(--spacing-4);">Madanapalli</p>
+                        <p style="line-height: 1.8;">
+                            opp. Peepal Tree School,<br>
+                            Society Colony,<br>
+                            Madanapalle, Andhra Pradesh 517325
+                        </p>
+                    </div>
+                    
+                    <div class="map-container mt-4">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0"
+                            src="https://maps.google.com/maps?q=opp.+Peepal+Tree+School,+Society+Colony,+Madanapalle&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/fvrUnXeECfQtWr4v9" target="_blank" class="btn btn-outline mt-4" style="width: 100%;">
+                        Open in Google Maps
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Floating Order Bar -->
+    <div class="floating-order-bar">
+        <div>
+            <h4 style="margin-bottom: 2px;">Craving a Kadak Chai?</h4>
+            <p style="font-size: var(--font-size-body-sm); color: var(--color-on-surface-variant);">Find your nearest Chai Love Kaapi outlet.</p>
+        </div>
+        <a href="./" class="btn btn-primary" style="border-radius: 24px;">Find Store</a>
+    </div>
+
+    <footer style="background-color: var(--color-surface-container-highest); padding: var(--spacing-16) 0; margin-top: 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-4);">Chai Love Kaapi</h2>
+            <p>Premium Taste. Zero Compromise.</p>
+            <p class="mt-8 label-md">© 2026 Chai Love Kaapi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
