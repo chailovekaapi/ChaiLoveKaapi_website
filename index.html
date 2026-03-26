@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Love Kaapi | Premium Taste. Zero Compromise.</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Inline styles for homepage specific elements to keep it organized -->
+    <style>
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-on-primary);
+            overflow: hidden;
+            background: linear-gradient(to right, var(--color-primary), var(--color-primary-container));
+        }
+        
+        /* Video background placeholder using gradient since video isn't available */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 114, 184, 0.7); /* primary overlay */
+            z-index: 1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: var(--spacing-4);
+        }
+
+        .hero-content h1 {
+            color: var(--color-surface-container-lowest);
+            margin-bottom: var(--spacing-6);
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: var(--spacing-4);
+            justify-content: center;
+            margin-top: var(--spacing-8);
+            flex-wrap: wrap;
+        }
+
+        /* USPs */
+        .usps {
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .usp-card {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .usp-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .usp-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-4);
+        }
+
+        /* Franchise Teaser */
+        .franchise-teaser {
+            background-color: var(--color-secondary);
+            color: var(--color-on-secondary);
+            text-align: center;
+            padding: var(--spacing-20) 0;
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        }
+
+        .franchise-teaser h2 {
+            color: var(--color-on-secondary);
+            margin-bottom: var(--spacing-6);
+        }
+        
+        /* Menu Teaser */
+        .menu-item {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--color-surface-container-low);
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-ambient-lg);
+        }
+        
+        .menu-img {
+            height: 250px;
+            background: #ccc;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .menu-info {
+            padding: var(--spacing-6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Chai Love Kaapi Logo" class="protruding-logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item active">Home</a>
+            <a href="menu.html" class="nav-item">Our Menu</a>
+            <a href="story.html" class="nav-item">Our Story</a>
+            <a href="franchise.html" class="nav-item">Franchise With Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <!-- Simulating video with an image -->
+            <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=2670" alt="Pouring Filter Coffee">
+        </div>
+        <div class="hero-content">
+            <h1>Premium Taste.<br>Zero Compromise.</h1>
+            <p style="font-size: var(--font-size-title-lg); font-weight: 500;">The Refreshing Ritual of Modern India.</p>
+            <div class="hero-ctas">
+                <a href="menu.html" class="btn btn-outline" style="color: white; border-color: white;">Explore Menu</a>
+                <a href="franchise.html" class="btn btn-secondary" style="background-color: var(--color-secondary);">Own a Franchise</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Triple Threat USPs -->
+    <section class="usps container">
+        <div class="grid grid-3">
+            <div class="surface-card ambient-shadow usp-card">
+                <div class="usp-icon">☕</div>
+                <h3 class="mb-12" style="font-size: var(--font-size-title-lg);">Affordable Luxury</h3>
+                <p>Premium quality filter coffee and mojitos at an honest price.</p>
+            </div>
+            <div class="surface-card ambient-shadow usp-card">
+                <div class="usp-icon">✨</div>
+                <h3 class="mb-12" style="font-size: var(--font-size-title-lg);">Uncompromising Hygiene</h3>
+                <p>"Spotless or Shut" standards ensure a pristine environment daily.</p>
+            </div>
+            <div class="surface-card ambient-shadow usp-card">
+                <div class="usp-icon">⚙️</div>
+                <h3 class="mb-12" style="font-size: var(--font-size-title-lg);">Authentic Modernity</h3>
+                <p>Traditional roots seamlessly blended with high-tech systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Teaser -->
+    <section class="surface-zone my-20 pt-20" style="margin-top: 100px;">
+        <div class="container">
+            <div class="text-center mb-12">
+                <p class="label-md">Signature Items</p>
+                <h2>The Visual Craving</h2>
+            </div>
+            <div class="grid grid-4">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&q=80&w=600" alt="Filter Coffee" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Authentic Filter Kaapi</h3>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=600" alt="Masala Chai" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Heritage Masala Chai</h3>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=600" alt="Mojito" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Vibrant Blue Mojito</h3>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&q=80&w=600" alt="Mango Lassi" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Golden Mango Lassi</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12" style="margin-top: var(--spacing-12);">
+                <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franchise Teaser -->
+    <section class="franchise-teaser mt-12">
+        <div class="container">
+            <h2>The Safe & Scalable Bet.</h2>
+            <p style="font-size: var(--font-size-body-lg); max-width: 600px; margin: 0 auto; margin-bottom: var(--spacing-8);">Partner with the fastest-growing hybrid hub. Low wastage, high ROI, and our comprehensive plug-and-play system.</p>
+            <a href="franchise.html" class="btn btn-outline" style="border-color: white; color: white;">Explore Franchise Model</a>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer style="background-color: var(--color-surface-container-highest); padding: var(--spacing-16) 0; margin-top: 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-4);">Chai Love Kaapi</h2>
+            <p>Premium Taste. Zero Compromise.</p>
+            <div style="margin-top: var(--spacing-8); color: var(--color-on-surface-variant);">
+                &copy; 2026 Chai Love Kaapi. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

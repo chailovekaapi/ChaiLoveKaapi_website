@@ -1,0 +1,57 @@
+:root {
+  /* Colors */
+  --color-primary: #0072B8;
+  --color-primary-container: #0089ff;
+  /* adjusted to be a variant of new blue */
+  --color-on-primary: #ffffff;
+  --color-secondary: #FF3333;
+  --color-secondary-container: #ff6666;
+  /* adjusted to be a variant of new red */
+  --color-on-secondary: #ffffff;
+  --color-surface: #f7f9fc;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f7;
+  --color-surface-container: #eceef1;
+  --color-surface-container-high: #e6e8eb;
+  --color-surface-container-highest: #e0e3e6;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #404751;
+  --color-outline: #717882;
+  --color-outline-variant: #c0c7d3;
+
+  --color-on-secondary-fixed-variant: #FF3333;
+  /* sophisticated red */
+
+  /* Typography */
+  --font-family-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-family-body: 'Manrope', sans-serif;
+
+  /* Typography Scale */
+  --font-size-display-lg: clamp(3rem, 5vw + 1rem, 4.5rem);
+  --font-size-headline-lg: clamp(2rem, 3vw + 1rem, 3rem);
+  --font-size-title-lg: clamp(1.5rem, 2vw + 1rem, 2rem);
+  --font-size-body-lg: 1.125rem;
+  --font-size-body-md: 1rem;
+  --font-size-label-md: 0.875rem;
+
+  /* Spacing */
+  --spacing-2: 0.5rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+
+  /* Elevation (Ambient Shadows & Glassmorphism) */
+  --shadow-ambient: 0 4px 24px rgba(25, 28, 30, 0.06);
+  --shadow-ambient-lg: 0 8px 32px rgba(25, 28, 30, 0.08);
+
+  /* Border Radius Constraints (Tonal Layering Rule) */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  /* Used for buttons */
+}

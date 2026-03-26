@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise With Us | Chai Love Kaapi</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .franchise-header {
+            background-color: var(--color-surface-container-low);
+            padding: calc(var(--spacing-24) + var(--spacing-8)) 0 var(--spacing-16);
+            text-align: center;
+        }
+
+        .franchise-header h1 {
+            color: var(--color-primary);
+        }
+
+        .metric-box {
+            text-align: center;
+            padding: var(--spacing-8);
+            background: var(--color-surface-container-lowest);
+            border-radius: var(--radius-lg);
+            transition: transform 0.3s;
+        }
+
+        .metric-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-ambient-lg);
+        }
+
+        .metric-value {
+            font-size: var(--font-size-display-lg);
+            font-family: var(--font-family-headline);
+            color: var(--color-secondary);
+            line-height: 1;
+            margin-bottom: var(--spacing-4);
+        }
+
+        .metric-label {
+            font-size: var(--font-size-body-lg);
+            font-weight: 600;
+        }
+
+        .model-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-12);
+            align-items: center;
+        }
+
+        .model-info, .model-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .investment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-8);
+            background: var(--color-surface-container-lowest);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-ambient);
+        }
+
+        .investment-table th, .investment-table td {
+            padding: var(--spacing-4) var(--spacing-6);
+            text-align: left;
+            border-bottom: 1px solid var(--color-surface-container-highest);
+        }
+
+        .investment-table th {
+            background-color: var(--color-surface-container-high);
+            font-weight: 700;
+            color: var(--color-on-surface);
+        }
+
+        .investment-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .sticky-form-wrapper {
+            position: sticky;
+            top: 100px;
+            background: var(--color-surface-container-lowest);
+            padding: var(--spacing-8);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-ambient-lg);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-6);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-2);
+            font-family: var(--font-family-body);
+            font-weight: 600;
+            color: var(--color-on-surface);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Chai Love Kaapi Logo" class="protruding-logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="menu.html" class="nav-item">Our Menu</a>
+            <a href="story.html" class="nav-item">Our Story</a>
+            <a href="franchise.html" class="nav-item active">Franchise With Us</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="franchise-header">
+        <div class="container">
+            <p class="label-md">Partnership Opportunity</p>
+            <h1>Precision is our Signature.<br>System Over Guesswork.</h1>
+            <p style="font-size: var(--font-size-title-lg); max-width: 800px; margin: var(--spacing-6) auto 0;">
+                The modern Indian cafe experience powered by a meticulously tuned, plug-and-play operational model.
+            </p>
+        </div>
+    </header>
+
+    <!-- Metrics -->
+    <section class="container" style="margin-top: -60px; position: relative; z-index: 10;">
+        <div class="grid grid-3">
+            <div class="metric-box ambient-shadow">
+                <div class="metric-value">>35%</div>
+                <div class="metric-label">High ROI Margin</div>
+            </div>
+            <div class="metric-box ambient-shadow">
+                <div class="metric-value">&lt;5%</div>
+                <div class="metric-label">Food Wastage</div>
+            </div>
+            <div class="metric-box ambient-shadow">
+                <div class="metric-value">12 Mo</div>
+                <div class="metric-label">Avg. Payback Period</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Column Layout: Model Info & sticky Form -->
+    <section class="container py-20 mt-12">
+        <div class="model-container">
+            
+            <div class="model-info">
+                <p class="label-md">The Plug-and-Play System</p>
+                <h2 style="margin-bottom: var(--spacing-6);">Built for Scale and Simplicity</h2>
+                <p style="font-size: var(--font-size-body-lg); margin-bottom: var(--spacing-8);">
+                    We provide a comprehensive bootcamp training program that turns raw staff into precision baristas. Our supply chain is centralized, meaning consistent quality across every cup without the usual operational headaches.
+                </p>
+
+                <h3 style="color: var(--color-primary); margin-top: var(--spacing-12); margin-bottom: var(--spacing-4);">Investment Models</h3>
+                <table class="investment-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Required Area</th>
+                            <th>Est. Investment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Express Kiosk</strong></td>
+                            <td>100 - 150 sq ft</td>
+                            <td>₹6 Lakhs - ₹8 Lakhs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Standard Cafe</strong></td>
+                            <td>300 - 500 sq ft</td>
+                            <td>₹12 Lakhs - ₹15 Lakhs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dine-In Lounge</strong></td>
+                            <td>800+ sq ft</td>
+                            <td>₹20 Lakhs+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="margin-top: var(--spacing-12); padding: var(--spacing-8); background-color: rgba(184, 17, 32, 0.05); border-radius: var(--radius-lg);">
+                    <h3 style="color: var(--color-secondary); margin-bottom: var(--spacing-2);">Comprehensive Support</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: var(--spacing-2);">✅ Location Selection & Store Setup</li>
+                        <li style="margin-bottom: var(--spacing-2);">✅ Staff Hiring & Training Bootcamp</li>
+                        <li style="margin-bottom: var(--spacing-2);">✅ Marketing & Launch Plan</li>
+                        <li style="margin-bottom: 0;">✅ Ongoing Operational Audits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="model-form">
+                <div class="sticky-form-wrapper">
+                    <h3 style="margin-bottom: var(--spacing-2); color: var(--color-primary);">Enquire for Your City</h3>
+                    <p style="margin-bottom: var(--spacing-6); font-size: var(--font-size-label-md);">Take the first step towards a profitable partnership.</p>
+                    
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submitted! We will contact you shortly.');">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="ghost-input" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="ghost-input" required placeholder="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Target City</label>
+                            <input type="text" id="city" class="ghost-input" required placeholder="Bangalore, Mumbai, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="investment">Investment Range</label>
+                            <select id="investment" class="ghost-input" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="kiosk">₹6L - ₹8L (Kiosk)</option>
+                                <option value="standard">₹12L - ₹15L (Standard)</option>
+                                <option value="dinein">₹20L+ (Dine-in)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-4);">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer style="background-color: var(--color-surface-container-highest); padding: var(--spacing-16) 0; margin-top: var(--spacing-12); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-4);">Chai Love Kaapi</h2>
+            <p>Premium Taste. Zero Compromise.</p>
+            <div style="margin-top: var(--spacing-8); color: var(--color-on-surface-variant);">
+                &copy; 2026 Chai Love Kaapi. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+/* Global Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-on-surface-variant);
+  background-color: var(--color-surface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headline);
+  color: var(--color-on-surface);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--font-size-display-lg);
+}
+
+h2 {
+  font-size: var(--font-size-headline-lg);
+}
+
+h3 {
+  font-size: var(--font-size-title-lg);
+}
+
+h3.category-title {
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Base Components & Rules */
+
+/* 1. The "No-Line" Rule - strict layout without borders */
+.surface-card {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  /* no border, soft tonal lift */
+}
+
+.surface-zone {
+  background-color: var(--color-surface-container-low);
+  padding: var(--spacing-16) var(--spacing-8);
+}
+
+/* 2. Glassmorphism & Elevation */
+.glass-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  /* Fixed height for single-line nav */
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0 var(--spacing-8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-nav.scrolled {
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 24px rgba(25, 28, 30, 0.08);
+}
+
+.ambient-shadow {
+  box-shadow: var(--shadow-ambient);
+}
+
+/* 3. Navigation Links (Uniform Style) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.nav-item {
+  padding: 0.6rem 1.25rem;
+  font-family: var(--font-family-body);
+  font-weight: 700;
+  font-size: var(--font-size-label-md);
+  color: var(--color-on-surface-variant);
+  border-radius: var(--radius-xl);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.nav-item:hover {
+  color: var(--color-primary);
+  background-color: var(--color-surface-container-high);
+}
+
+.nav-item.active {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-ambient);
+}
+
+/* 4. Logo & Protruding Effect */
+.logo {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img.protruding-logo {
+  height: 120px;
+  /* Large height to protrude */
+  width: auto;
+  position: relative;
+  top: 20px;
+  /* Protrude downward */
+  border-radius: 24px;
+  /* Curved borders as per user request */
+  background: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  z-index: 1001;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-nav.scrolled img.protruding-logo {
+  height: 100px;
+  top: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Navbar override (for Menu page) */
+.glass-nav[style*="background-color: rgba(0, 29, 53"] .nav-item {
+  color: var(--color-surface-container-highest);
+}
+
+.glass-nav[style*="background-color: rgba(0, 29, 53"] .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.glass-nav[style*="background-color: rgba(0, 29, 53"] .nav-item.active {
+  background-color: var(--color-primary-container);
+  color: white;
+  border-color: var(--color-primary-container);
+}
+
+/* 4. Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-family-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-container));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-ambient-lg);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(to right, var(--color-secondary), var(--color-secondary-container));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-ambient-lg);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-on-primary);
+  border: 2px solid var(--color-on-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-on-primary);
+  color: var(--color-primary);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-8);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+/* Spacing Helpers */
+.mt-12 {
+  margin-top: var(--spacing-12);
+}
+
+.mb-12 {
+  margin-bottom: var(--spacing-12);
+}
+
+.py-20 {
+  padding-top: var(--spacing-20);
+  padding-bottom: var(--spacing-20);
+}
+
+/* Typography Helpers */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-white {
+  color: var(--color-surface-container-lowest);
+}
+
+.label-md {
+  font-size: var(--font-size-label-md);
+  color: var(--color-on-secondary-fixed-variant);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Ghost Border for Inputs */
+.ghost-input {
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid rgba(192, 199, 211, 0.2);
+  /* 20% opacity outline-variant */
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  width: 100%;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  color: var(--color-on-surface);
+  transition: all 0.3s ease;
+}
+
+.ghost-input:focus {
+  outline: none;
+  border-color: rgba(192, 199, 211, 0.8);
+  box-shadow: var(--shadow-ambient);
+}
+
+/* Floating Order Bar */
+.floating-order-bar {
+  position: fixed;
+  bottom: var(--spacing-6);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-ambient-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  z-index: 1000;
+  width: 90%;
+  max-width: 600px;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .floating-order-bar {
+    width: 95%;
+    padding: var(--spacing-4);
+    bottom: var(--spacing-4);
+  }
+}

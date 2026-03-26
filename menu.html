@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Chai Love Kaapi</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Deep Blue Background as per requirements */
+        body {
+            background-color: var(--color-primary-fixed-variant, #001d35);
+            color: var(--color-surface);
+        }
+
+        .menu-header {
+            padding: calc(var(--spacing-24) + var(--spacing-8)) 0 var(--spacing-16);
+            text-align: center;
+            background: linear-gradient(to bottom, #001d35, #002b4d);
+        }
+
+        .menu-header h1 {
+            color: var(--color-on-primary);
+        }
+
+        /* Masonry Grid */
+        .masonry-gallery {
+            column-count: 3;
+            column-gap: var(--spacing-8);
+            padding: var(--spacing-8) 0 var(--spacing-24);
+        }
+        
+        @media (max-width: 900px) {
+            .masonry-gallery { column-count: 2; }
+        }
+        @media (max-width: 600px) {
+            .masonry-gallery { column-count: 1; }
+        }
+
+        .menu-card {
+            break-inside: avoid;
+            margin-bottom: var(--spacing-8);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05); /* subtle glass effect for items */
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .menu-card img {
+            width: 100%;
+            display: block;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .menu-card-info {
+            padding: var(--spacing-4) var(--spacing-6);
+        }
+
+        .menu-card-info h3 {
+            color: var(--color-surface-container-lowest);
+            font-size: var(--font-size-title-lg);
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 29, 53, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.visible {
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--color-surface);
+            color: var(--color-on-surface);
+            max-width: 800px;
+            width: 90%;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+
+        @media (min-width: 768px) {
+            .modal-content {
+                flex-direction: row;
+            }
+        }
+
+        .modal-image {
+            flex: 1;
+            min-height: 300px;
+            background: #ccc;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-details {
+            flex: 1;
+            padding: var(--spacing-8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: var(--spacing-4);
+            right: var(--spacing-4);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .close-modal:hover {
+            background: var(--color-secondary);
+        }
+
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav" style="background-color: rgba(0, 29, 53, 0.8);">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Chai Love Kaapi Logo" class="protruding-logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="menu.html" class="nav-item active">Our Menu</a>
+            <a href="story.html" class="nav-item">Our Story</a>
+            <a href="franchise.html" class="nav-item">Franchise With Us</a>
+        </div>
+    </nav>
+
+    <header class="menu-header">
+        <div class="container">
+            <p class="label-md" style="color: var(--color-secondary-fixed-dim, #ffb3ae);">Our Craft</p>
+            <h1>The Visual Craving</h1>
+            <p style="font-size: var(--font-size-title-lg); color: var(--color-surface-container-high); max-width: 600px; margin: var(--spacing-4) auto 0;">Experience the vibrant colors and authentic tastes of our signature blends.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="masonry-gallery">
+            <!-- Item 1 -->
+            <div class="menu-card" data-title="Authentic Filter Kaapi" data-desc="Brewed slowly in a traditional brass dabara. The perfect balance of decoction and frothy milk." data-img="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&q=80&w=800">
+                <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&q=80&w=600" alt="Filter Coffee">
+                <div class="menu-card-info">
+                    <h3>Authentic Filter Kaapi</h3>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="menu-card" data-title="Vibrant Blue Mojito" data-desc="A refreshing signature cooler layered with citrus, mint, and our secret blue curacao blend." data-img="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=800">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=600" alt="Blue Mojito">
+                <div class="menu-card-info">
+                    <h3>Vibrant Blue Mojito</h3>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card" data-title="Heritage Masala Chai" data-desc="Our grandmother's recipe. A perfect blend of Assam leaves and fresh crushed spices." data-img="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=800">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=600" alt="Masala Chai">
+                <div class="menu-card-info">
+                    <h3>Heritage Masala Chai</h3>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-card" data-title="Golden Mango Lassi" data-desc="Rich, creamy, and bursting with the flavor of ripe Alphonso mangoes." data-img="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&q=80&w=800">
+                <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&q=80&w=600" alt="Mango Lassi">
+                <div class="menu-card-info">
+                    <h3>Golden Mango Lassi</h3>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="menu-card" data-title="Crispy Samosa Bites" data-desc="Mini golden triangles stuffed with spicy potato and peas. Perfect with chai." data-img="https://images.unsplash.com/photo-1601050690597-df0568f70918?auto=format&fit=crop&q=80&w=800">
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70918?auto=format&fit=crop&q=80&w=600" alt="Samosa">
+                <div class="menu-card-info">
+                    <h3>Crispy Samosa Bites</h3>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="menu-card" data-title="Spiced French Fries" data-desc="Double-fried for extra crunch, tossed in our signature peri-peri spice dust." data-img="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&q=80&w=800">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&q=80&w=600" alt="French Fries">
+                <div class="menu-card-info">
+                    <h3>Spiced French Fries</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Order Bar -->
+    <div class="floating-order-bar">
+        <div>
+            <h4 style="margin:0; font-family: var(--font-family-body);">Craving something?</h4>
+            <p style="font-size: var(--font-size-label-md); margin:0;">Visit your nearest outlet today.</p>
+        </div>
+        <a href="story.html" class="btn btn-secondary">Find Store</a>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal-overlay" id="menuModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-image">
+                <img id="modalImg" src="" alt="Menu Item">
+            </div>
+            <div class="modal-details">
+                <h2 id="modalTitle" style="color: var(--color-primary); margin-bottom: var(--spacing-4);">Item Name</h2>
+                <p id="modalDesc" style="font-size: var(--font-size-body-lg);">Item Description...</p>
+                <div style="margin-top: var(--spacing-8);">
+                    <p class="label-md">Available at all locations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
